@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Todo Otems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Due date</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Completed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todo_otems.each do |todo_otem| %>
+      <tr>
+        <td><%= todo_otem.due_date %></td>
+        <td><%= todo_otem.title %></td>
+        <td><%= todo_otem.description %></td>
+        <td><%= todo_otem.completed %></td>
+        <td><%= link_to 'Show', todo_otem %></td>
+        <td><%= link_to 'Edit', edit_todo_otem_path(todo_otem) %></td>
+        <td><%= link_to 'Destroy', todo_otem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todo otem', new_todo_otem_path %>

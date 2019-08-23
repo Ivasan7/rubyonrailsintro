@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @todo_otem.due_date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @todo_otem.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @todo_otem.description %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @todo_otem.completed %>
+</p>
+
+<%= link_to 'Edit', edit_todo_otem_path(@todo_otem) %> |
+<%= link_to 'Back', todo_otems_path %>
